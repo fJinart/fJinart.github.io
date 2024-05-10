@@ -80,3 +80,7 @@ footer{
 @media screen and (max-width:480px){
     
 }
+
+@media (orientation: portrait) {
+	#wrap{width: 360px;height:800px; }
+}
