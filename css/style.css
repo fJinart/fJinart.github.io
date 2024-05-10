@@ -85,5 +85,5 @@ footer{
 }
 
 @media screen and (max-width:600px) and (orientation: landscape) {
-	#wrap{height: 80%;}
+	#wrap{height: 50%;}
 }
