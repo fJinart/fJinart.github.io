@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'sarina';
+    src: url('../font/Sarina-Regular.ttf') format('truetype');
+}
+
+#wrap{
+    width:1200px;
+    height: 675px;
+    margin: 0 auto;
+    background-color:cadetblue;
+}
+
+header{
+    width: 100%;
+    height: 14.8%;
+    background-color: antiquewhite;
+
+}
+
+#main{
+    width:100%;
+    height: 40.8%;
+    background-color: aqua;
+    box-sizing: border-box;
+}
+
+/* #contents{
+    width:100%;
+    height: 40.8%;
+} */
+
+.painting{
+    float:left;
+    width:33.3%;
+    height: 29.6%;
+    background-color:aquamarine;
+    
+}
+
+.design{
+    float:left;
+    width:33.3%;
+    height: 29.6%;
+    background-color:azure;
+    
+}
+
+.photography{
+    float:left;
+    width:33.4%;
+    height: 29.6%;
+    background-color:beige;
+    
+}
+
+footer{
+    clear:both;
+    width:100%;
+    height: 14.8%;
+    background-color: bisque;
+}
+
+@media screen and (max-width:1024px){
+    #wrap {width:100%;}
+}
+
+@media screen and (max-width:768px){
+    
+}
+
+@media screen and (max-width:600px){
+    /* .painting{float: none; width:100%;}
+    .design {float: none; width:100%;}
+    .photography {float: none; width:100%;}
+    footer{float: none; width:100%;} */
+    header{height: 7.4%;}
+    main{height: 20.4%;}
+    .painting, .design, .photography{height:14.8%;}
+    footer{height: 7.4%;}
+    
+}
+
+@media screen and (max-width:480px){
+    
+}
