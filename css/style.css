@@ -84,9 +84,6 @@ footer{
 	#wrap{width: 360px;height:800px; }
 }
 
-
-@media only screen and (min-device-width: 480px) 
-                   and (max-device-width: 640px) 
-                   and (orientation: landscape) {
-                    #wrap{height: 80%;}
+@media screen and (max-width:600px) and (orientation: landscape) {
+	#wrap{height: 80%;}
 }
