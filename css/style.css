@@ -97,7 +97,7 @@ footer {
 
 }
 
-@media screen and (max-width:600px) and (orientation: portrait) {
+@media screen and (max-width:1024px) and (orientation: portrait) {
 
     #wrap {
         width: 360px;
@@ -106,7 +106,7 @@ footer {
 }
 
 
-@media screen and (min-width:480px) and (orientation: landscape) {
+@media screen and (max-width:768px) and (orientation: landscape) {
     header {
         height: 8%;
     }
