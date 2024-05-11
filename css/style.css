@@ -13,7 +13,7 @@
 }
 
 header {
-    
+
     width: 100%;
     height: 14.8%;
     background-color: antiquewhite;
@@ -21,21 +21,21 @@ header {
 }
 
 #main {
-    float:left;
+    float: left;
     width: 100%;
     height: 40.8%;
     background-color: aqua;
     box-sizing: border-box;
 }
 
-#contents{
-    float:left;
+#contents {
+    float: left;
     width: 100%;
     height: 29.6%;
 }
 
 .painting {
-    float:left;
+    float: left;
     width: 33.3%;
     height: 100%;
     background-color: aquamarine;
@@ -43,15 +43,15 @@ header {
 }
 
 .design {
-    float:left;
+    float: left;
     width: 33.3%;
     height: 100%;
-    background-color:azure;
+    background-color: azure;
 
 }
 
 .photography {
-    float:left;
+    float: left;
     width: 33.4%;
     height: 100%;
     background-color: beige;
@@ -59,7 +59,7 @@ header {
 }
 
 footer {
-    float:left;
+    float: left;
     width: 100%;
     height: 14.8%;
     background-color: bisque;
@@ -92,50 +92,54 @@ footer {
 
 }
 
-@media screen and (max-width:480px) {}
+/* @media screen and (max-width:480px) {} */
 
 @media screen and (max-width:600px) and (orientation: portrait) {
+
     #wrap {
         width: 360px;
         height: 800px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
 
+@media screen and (min-width:480px) and (orientation: landscape) {
     header {
-        height: 7.4%;
+        height: 8%;
     }
 
     #main {
         width: 60%;
-        height: 29.6%;;
+        height: 29.6%;
+        ;
     }
 
     #contents {
         width: 40%;
-        float:right;
+        height: 29.6%;
+        float: right;
     }
 
-    .painting{
-        clear:none;
+    .painting {
+        clear: none;
         width: 100%;
         height: 33.3%;
     }
 
-    .design{
-        clear:none;
+    .design {
+        clear: none;
         width: 100%;
         height: 33.3%;
     }
 
-    .photography{
-        clear:none;
+    .photography {
+        clear: none;
         width: 100%;
         height: 33.4%;
     }
 
+
     footer {
-        height: 7.4%;
+        height: 8%;
     }
 }
