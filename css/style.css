@@ -71,13 +71,12 @@ footer {
     }
 }
 
+
 @media screen and (max-width:768px) {
+
     #wrap {
         width: 80%;
     }
-}
-
-@media screen and (max-width:768px) {
     header {
         height: 7.4%;
     }
@@ -96,13 +95,13 @@ footer {
 
 }
 
-/* @media screen and (max-width:768px) and (orientation: portrait) {
+@media screen and (max-width:768px) and (orientation: portrait) {
 
     #wrap {
         width: 360px;
-        height: 800px;
+        height: 700px;
     }
-} */
+}
 
 
 @media screen and (max-width:900px) and (orientation: landscape) {
@@ -113,9 +112,8 @@ footer {
     }
 
     #main {
-        width: 40%;
+        width: 60%;
         height: 29.6%;
-        ;
     }
 
     #contents {
