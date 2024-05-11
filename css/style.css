@@ -6,8 +6,8 @@
 }
 
 #wrap {
-    width: 1200px;
-    height: 675px;
+    width: 1300px;
+    height: 585px;
     margin: 0 auto;
     background-color: cadetblue;
 }
@@ -71,9 +71,11 @@ footer {
     }
 }
 
-/* @media screen and (max-width:768px) {
-
-} */
+@media screen and (max-width:768px) {
+    #wrap {
+        width: 80%;
+    }
+}
 
 @media screen and (max-width:768px) {
     header {
@@ -96,14 +98,16 @@ footer {
 
 @media screen and (max-width:768px) and (orientation: portrait) {
 
-/*     #wrap {
+    #wrap {
         width: 360px;
         height: 800px;
-    } */
+    }
 }
 
 
-@media screen and (max-width:768px) and (orientation: landscape) {
+@media screen and (max-width:900px) and (orientation: landscape) {
+
+    
     header {
         height: 8%;
     }
