@@ -84,6 +84,6 @@ footer{
 	#wrap{width: 360px;height:800px; }
 }
 
-@media screen and (max-width:600px) and (orientation: landscape) {
-	#wrap{height: 50%;}
+@media screen and (max-height:600px) and (orientation: landscape) {
+	#wrap{width:600px; height: 300px;}
 }
