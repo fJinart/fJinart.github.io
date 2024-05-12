@@ -39,7 +39,7 @@ header {
     width: 33.3%;
     height: 100%;
     background-color: aquamarine;
-    display:block;
+    
 
 }
 
@@ -48,7 +48,7 @@ header {
     width: 33.3%;
     height: 100%;
     background-color: azure;
-    display:block;
+    
 
 }
 
@@ -57,7 +57,7 @@ header {
     width: 33.4%;
     height: 100%;
     background-color: beige;
-    display:block;
+    
 
 }
 
@@ -93,24 +93,27 @@ footer {
     }
 
     #contents {
-        width: 30%;
+        width: 40%;
         height: 29.6%;   
     }
 
     .painting {
         width: 100%;
         height: 33.3%;
+        display:block;
     }
 
     .design {
         
         width: 100%;
         height: 33.3%;
+        display:block;
     }
 
     .photography {  
         width: 100%;
         height: 33.4%;
+        display:block;
     }
 
     footer {
