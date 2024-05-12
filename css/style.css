@@ -6,31 +6,31 @@
 }
 
 #wrap {
-    width: 800px;
-    height: 585px;
+    width: 360px;
+    height: 800px;
     margin: 0 auto;
     background-color: cadetblue;
 }
 
 header {
     width: 100%;
-    height: 14.8%;
+    height: 8%;
     background-color: antiquewhite;
 }
 
 #main {
     float: left;
     width: 100%;
-    height: 40.8%;
+    height: 40%;
     background-color: aqua;
-/*     box-sizing: border-box; */
+    /* box-sizing: border-box; */
     
 }
 
 #contents {
     float: left;
     width: 100%;
-    height: 29.6%;
+    height: 20%;
     
 }
 
@@ -64,7 +64,7 @@ header {
 footer {
     float: left;
     width: 100%;
-    height: 14.8%;
+    height: 8%;
     background-color: bisque;
 }
 
@@ -96,26 +96,25 @@ footer {
     #contents {
         width: 40%;
         height: 29.6%;
-          
     }
 
     .painting {
         width: 100%;
         height: 33.3%;
-/*         display:block; */
+        display:block;
     }
 
     .design {
         
         width: 100%;
         height: 33.3%;
-/*         display:block; */
+        display:block;
     }
 
     .photography {  
         width: 100%;
         height: 33.4%;
-/*         display:block; */
+        display:block;
     }
 
     footer {
@@ -124,7 +123,7 @@ footer {
 
 }
 
-@media screen and (max-width:768px) and (orientation: portrait) {
+/* @media screen and (max-width:768px) and (orientation: portrait) {
 
     #wrap {
         width: 360px;
@@ -146,4 +145,4 @@ footer {
     footer {
         height: 10%;
     }
-}
+} */
