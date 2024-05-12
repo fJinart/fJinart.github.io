@@ -126,22 +126,22 @@ footer {
 
     #wrap {
         width: 360px;
-        height: 700px;
+        height: 500px;
     }
 
     header {
-        height: 7.4%;
+        height: 8%;
     }
 
     #main {
-        height: 40%;
+        height: 60%;
     }
 
     #contents {
-        height: 14.8%;
+        height: 24%;
     }
 
     footer {
-        height: 7.4%;
+        height: 8%;
     }
 }
