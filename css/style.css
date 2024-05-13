@@ -1,100 +1,266 @@
 @charset "UTF-8";
 
 @font-face {
-    font-family: 'sarina';
+    font-family: 'Sarina';
     src: url('../font/Sarina-Regular.ttf') format('truetype');
+
+    font-family: 'KoPubWorld_M';
+    src: url('../font/KoPubWorld\ Dotum_Pro\ Medium.otf') format('truetype');
+
+}
+
+* {
+    font-family: 'KoPubWorld_M';
+    font-size: 10px;
+    color: #67885c;
+
 }
 
 #wrap {
     width: 360px;
     height: 800px;
     margin: 0 auto;
-    background-color: cadetblue;
+    background-color: #fff099;
 }
 
 header {
     width: 100%;
-    height: 8%;
-    background-color: antiquewhite;
+    height: 10%;
+    background-color: #fff099;
+}
+
+.logo {
+    width: 20%;
+    height: 100%;
 }
 
 #main {
     float: left;
     width: 100%;
-    height: 40%;
-    background-color: aqua;
-    /* box-sizing: border-box; */
+    height: 60%;
+    background-color: #fff099;
     
+}
+
+.title {
+    float: left;
+    margin-top: 1em;
+    font-family: 'Sarina';
+    width: 100%;
+    height: 10%;
+    line-height: 1.2em;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.b_container {
+    float:left;
+    width: 85%;
+    height: 90%;
+    margin-top: 1.5em;
+}
+
+.tab>li{
+    margin-left:2.3em;
+}
+
+.tab>li>a{
+    float:left;
+    width:8%;
+    height:1.3em;
+    line-height:1.5em;
+    border-left: #67885c solid 0.1em;
+    margin-top:0.6em;
+}
+
+.tab>li.active>a{
+    float:left;
+    width:8%;
+    height:1.3em;
+    line-height:1.5em;
+    margin-top:0.6em;
+}
+
+.tab>li span{
+    margin-left: 0.3em;
+    color:#67885c;
+}
+
+.tab>li.active span{
+    margin-left: 0.3em;
+    color: #72b45c;
+}
+
+.tab>li div{
+    position:absolute;
+    /* left:5%; */
+    height:0px;
+    overflow: hidden;
+    margin-top:3em;
+}
+
+.tab>li.active div{
+    float:left;
+    width:70%;
+    height:80%;
+    margin-top:3em;
+
+
+}
+
+.body{
+    line-height: 1.5em;
+    text-align: justify;
+    margin-left: 0.3em;
+}
+
+.body_E{
+    line-height: 1.3em;
+    text-align: justify;
+    margin-left: 0.3em;
 }
 
 #contents {
     float: left;
     width: 100%;
-    height: 20%;
-    
+    height: 15%;
+    background-color: #fff099;
+
 }
 
 .painting {
     float: left;
     width: 33.3%;
     height: 100%;
-    background-color: aquamarine;
-    
+    text-align: center;
+}
 
+.painting span{
+    font-size:1.1em;
+}
+
+.painting img{
+    width: 25px;
+    height:25px;
+    margin-top: 10%;
+}
+
+.painting img:hover{
+    opacity: 0.5;
+    filter: invert(66%) sepia(47%) saturate(433%) hue-rotate(60deg) brightness(89%) contrast(86%);
 }
 
 .design {
     float: left;
     width: 33.3%;
     height: 100%;
-    background-color: azure;
-    
-
+    text-align: center;
 }
+
+.design span{
+    font-size:1.1em;
+}
+
+.design img{
+    width: 25px;
+    height:25px;
+    margin-top: 10%;
+}
+
+/* .design img:hover{
+
+} */
 
 .photography {
     float: left;
-    width: 33.4%;
+    width: 33.3%;
     height: 100%;
-    background-color: beige;
-    
-
+    text-align: center;
 }
+
+.photography span{
+    font-size:1.1em;
+}
+
+.photography img{
+    width: 25px;
+    height:25px;
+    margin-top: 10%;
+}
+
+/* .photography img:hover{
+
+} */
 
 footer {
     float: left;
     width: 100%;
-    height: 8%;
-    background-color: bisque;
+    height: 10%;
 }
+
+.foot{
+    float: left;
+    text-align: center;
+    width: 100%;
+    height: 4em;
+    line-height:4em;
+
+}
+
 
 @media screen and (min-width:1024px) {
     #wrap {
         width: 80%;
     }
+
+    #main {
+        height: 60%;
+    }
+
+    /* .tab>li div{
+        left: 10%;
+        width: 80%;
+        margin-top: 10%;
+    } */
+
 }
 
 @media screen and (max-width:1024px) {
     #wrap {
         width: 100%;
-        
+
+    }
+    .tab>li.active div{
+        width:85%;
+    }
+    
+
+}
+
+@media screen and (min-width:700px) and (max-width:1023px){
+    #main {
+        height: 60%;
     }
 }
 
 
-@media screen and (max-width:768px) and (orientation: landscape) {
+/* @media screen and (max-width:768px) and (orientation: landscape) {
 
     header {
         height: 8%;
     }
 
     #main {
-        width: 60%;
+        width: 70%;
         height: 29.6%;
     }
 
+    .body{
+        width: 90%;
+    }
+
     #contents {
-        width: 40%;
+        width: 30%;
         height: 29.6%;
     }
 
@@ -121,28 +287,4 @@ footer {
         height: 8%;
     }
 
-}
-
-/* @media screen and (max-width:768px) and (orientation: portrait) {
-
-    #wrap {
-        width: 360px;
-        height: 500px;
-    }
-
-    header {
-        height: 10%;
-    }
-
-    #main {
-        height: 60%;
-    }
-
-    #contents {
-        height: 20%;
-    }
-
-    footer {
-        height: 10%;
-    }
 } */
