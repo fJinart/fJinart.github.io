@@ -4,9 +4,10 @@
     font-family: 'Sarina';
     src: url('../font/Sarina-Regular.ttf') format('truetype');
 
+}
+@font-face {
     font-family: 'KoPubWorld_M';
     src: url('../font/KoPubWorld\ Dotum_Pro\ Medium.otf') format('truetype');
-
 }
 
 * {
