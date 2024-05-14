@@ -243,47 +243,30 @@ footer {
 }
 
 
-/* @media screen and (max-width:768px) and (orientation: landscape) {
+@media screen and (max-width:768px) and (orientation: landscape) {
 
-    header {
-        height: 8%;
+    #wrap {
+        width: 80%;
     }
 
     #main {
-        width: 70%;
-        height: 29.6%;
-    }
-
-    .body{
-        width: 90%;
+        height: 65%;
     }
 
     #contents {
-        width: 30%;
-        height: 29.6%;
+        height: 14%;
     }
 
-    .painting {
-        width: 100%;
-        height: 33%;
-        display:block;
+    .tab>li>a {
+        display: none;
     }
 
-    .design {
-        
-        width: 100%;
-        height: 33%;
-        display:block;
+    .tab>li div {
+        float: left;
+        width: 70%;
+        height: 80%;
+        margin-top: 14em;
+
     }
 
-    .photography {  
-        width: 100%;
-        height: 34%;
-        display:block;
-    }
-
-    footer {
-        height: 8%;
-    }
-
-} */
+}
