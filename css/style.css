@@ -241,32 +241,3 @@ footer {
         height: 60%;
     }
 }
-
-
-@media screen and (orientation: landscape) {
-
-    #wrap {
-        width: 80%;
-    }
-
-    #main {
-        height: 65%;
-    }
-
-    #contents {
-        height: 14%;
-    }
-
-    .tab>li>a {
-        display: none;
-    }
-
-    .tab>li div {
-        float: left;
-        width: 70%;
-        height: 80%;
-        margin-top: 14em;
-
-    }
-
-}
