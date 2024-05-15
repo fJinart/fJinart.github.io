@@ -41,6 +41,8 @@ header {
 }
 
 .menu_m{
+    position:absolute;
+    right:0;
     float:right;
     width: 13%;
     height:100%;
