@@ -11,6 +11,11 @@
     src: url('../font/KoPubWorld\ Dotum_Pro\ Medium.otf') format('truetype');
 }
 
+html{
+    background-color: #fff099;
+
+}
+
 * {
     font-family: 'KoPubWorld_M';
     font-size: 10px;
