@@ -15,12 +15,10 @@ html{
     background-color: #fff099;
 
 }
-
 * {
     font-family: 'KoPubWorld_M';
     font-size: 10px;
     color: #67885c;
-
 }
 
 #wrap {
@@ -65,7 +63,7 @@ header {
     top:100%;
     background-color:#67885c;
     color:#fff099;
-    width: 40%;
+    width: 50%;
 }
 
 
