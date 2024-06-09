@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography</title>
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/reset.css" type="text/css">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="images/favicon_57.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114*114" ref="images/favicon_114_114.png">
+    <script src="script/jquery-1.12.3.js" type="text/javascript"></script>
+    <script src="script/script.js" defer type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+            <div id="header">
+                <div class="logo"><a href="index.html"><img src="images/logo.png" alt="logo"></a></div>
+                <div class="menu_m"><a href="#"><img src="icons/Navi_M.png" alt="navi_m"></a></div>
+                <nav class="popup_menu">
+                    <ul class="navi_m">
+                        <li><a href="painting.html"><span>Painting</span></a></li>
+                        <li><a href="mediaart.html"><span>Media Art</span></a></li>
+                        <li><a href="design.html"><span>Design</span></a></li>
+                        <li><a href="photography.html"><span>Photography</span></a></li>
+                        <li><a href="bio.html"><span>Bio</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <div class="body_wrap">
+            <!-- Slideshow container -->
+            <main class="main-content" id="slide_photo">
+                <section class="slideshow">
+                    <div class="slideshow-inner">
+                        <div class="slides">
+
+                            <div class="slide is-active">
+                                <div class="slide-content">
+                                    <div class="caption">
+                                        <div class="title_slide">Walk</div>
+                                        <!-- <div class="text_slide">
+                                        <p>Slide description 1</p>
+                                    </div> -->
+                                    </div>
+                                    <a href="walk.html" class="btn">
+                                        <span class="btn-inner">Details</span>
+                                    </a>
+                                </div>
+                                <div class="image-container">
+                                    <img src="images/Photography/Walk/CherryBlossom1.jpg" alt="park1" class="image" />
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <div class="slide-content">
+                                    <div class="caption">
+                                        <div class="title_slide">Trips</div>
+
+                                    </div>
+                                    <a href="trips.html" class="btn">
+                                        <span class="btn-inner">Details</span>
+                                    </a>
+                                </div>
+                                <div class="image-container">
+                                    <img src="images/Photography/Trips/Trips1.jpg" alt="Trips1" class="image" />
+                                </div>
+                            </div>
+
+                            <div class="slide">
+                                <div class="slide-content">
+                                    <div class="caption">
+                                        <div class="title_slide">Sunset</div>
+
+                                    </div>
+                                    <a href="sunset.html" class="btn">
+                                        <span class="btn-inner">Details</span>
+                                    </a>
+                                </div>
+                                <div class="image-container">
+                                    <img src="images/Photography/Sunset/Sunset1.jpg" alt="Sunset1" class="image" />
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="pagination">
+                            <div class="item is-active">
+                                <span class="icon">1</span>
+                            </div>
+                            <div class="item">
+                                <span class="icon">2</span>
+                            </div>
+                            <div class="item">
+                                <span class="icon">3</span>
+                            </div>
+
+                        </div>
+
+                        <div class="arrows">
+                            <div class="arrow prev">
+                                <span class="svg svg-arrow-left">
+                                    <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px"
+                                        height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26"
+                                        xml:space="preserve">
+                                        <path
+                                            d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z" />
+                                    </svg>
+                                    <span class="alt sr-only"></span>
+                                </span>
+                            </div>
+                            <div class="arrow next">
+                                <span class="svg svg-arrow-right">
+                                    <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px"
+                                        height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26"
+                                        xml:space="preserve">
+                                        <path
+                                            d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z" />
+                                    </svg>
+                                    <span class="alt sr-only"></span>
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <div class="foot">ⓒ 2024 fJin. ALL RIGHTS RESERVED.</div>
+        </footer>
+
+    </div>
+</body>
+
+
+</html>
