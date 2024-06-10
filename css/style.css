@@ -485,8 +485,7 @@ footer {
     position: relative;
     width: 90%;
     margin-bottom: 5%;
-    /* height: 100vh; */
-    /* height: 70%; */
+    height: 100vh;
 
     #video_slider {
         top: 0;
@@ -514,7 +513,7 @@ footer {
     .navigation li {
         list-style: none;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: 2px;
         margin: 1px;
         border: 1px solid #fff;
         opacity: 0.7;
@@ -1032,23 +1031,10 @@ footer {
     }
 
     section .navigation {
+        transform: translateX(-10%);
         bottom: -10%;
     }
 
-    /* .field_contents{
-        flex-direction: column;
-    }
-
-    .field_img{
-        width:100%;
-        height: 70vh;
-    }
-
-
-    .field_txt{
-        width:100%;
-        height: 30vh;
-    } */
 
     .field_txt{
         scale:0.85;
