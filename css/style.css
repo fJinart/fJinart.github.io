@@ -141,8 +141,12 @@ header {
     margin-top: 1.3em;
     display: block;
     flex:auto;
-    /* flex-wrap: wrap; */
-    /* overflow:auto; */
+    flex-wrap: wrap;
+    overflow:auto;
+}
+
+#b_container_bio{
+    height: 130vh;
 }
 
 
@@ -966,7 +970,6 @@ footer {
     width: 100%;
     height: 100%;
     display: block;
-    
 }
 
 /* Walk Page */
@@ -1071,6 +1074,10 @@ footer {
     #slide_series{
         width: 100vw;
         height: 80vh;
+    }
+
+    #b_container_bio{
+        height: 180vh;
     }
 
 }
