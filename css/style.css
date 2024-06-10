@@ -502,8 +502,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 50px;
-        width: 75px;
+        height: 40px;
+        width: 60px;
     }
 
     .navigation li {
@@ -520,8 +520,8 @@ footer {
     }
 
     .navigation li img:hover {
-        height: 75px;
-        width: 100px;
+        height: 65px;
+        width: 90px;
         border: 2px solid #fff;
     }
 }
