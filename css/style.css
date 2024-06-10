@@ -511,6 +511,7 @@ footer {
     }
 
     .navigation li {
+        flex:1 0 auto;
         list-style: none;
         cursor: pointer;
         border-radius: 2px;
@@ -1064,9 +1065,4 @@ footer {
     #b_container_bio{
         height: 210vh;
     }
-
-    .navigation li{
-        float:left;
-    }
-
 }
