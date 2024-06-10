@@ -1064,12 +1064,8 @@ video {
         height: 60%;
     }
 
-    #slide_series {
+    /* #slide_series {
         width: 100vw;
         height: 80vh;
-    }
-
-    #b_container_bio {
-        height: 210vh;
-    }
+    } */
 }
