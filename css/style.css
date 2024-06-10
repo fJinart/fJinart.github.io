@@ -499,7 +499,8 @@ footer {
         left: 50%;
         transform: translateX(-50%);
         z-index: 100;
-        display: inline-flex;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
         align-items: center;
         height: 40px;
@@ -507,8 +508,6 @@ footer {
     }
 
     .navigation li {
-        /* flex-direction: row; */
-        /* display: inline-flex; */
         list-style: none;
         cursor: pointer;
         border-radius: 4px;
