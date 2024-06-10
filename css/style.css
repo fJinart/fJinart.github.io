@@ -106,7 +106,7 @@ header {
 .body_wrap {
     width: 100%;
     height: auto;
-    flex: auto;
+    flex: 1 0 auto;
     /* flex-wrap: wrap; */
     padding-bottom: 20px;
     margin-right: 3%;
@@ -802,7 +802,9 @@ video {
 
         &.is-active {
             /* display: block; */
-            display: flex;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
             /* justify-content: center; */
 
         }
