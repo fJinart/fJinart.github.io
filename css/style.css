@@ -507,7 +507,7 @@ footer {
     }
 
     .navigation li {
-        flex-direction: row;
+        /* flex-direction: row; */
         list-style: none;
         cursor: pointer;
         border-radius: 4px;
@@ -517,6 +517,7 @@ footer {
     }
 
     .navigation li img {
+        flex-direction: row;
         transition: 0.5s;
     }
 
