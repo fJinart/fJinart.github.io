@@ -508,6 +508,7 @@ footer {
     }
 
     .navigation li {
+        float:left;
         list-style: none;
         cursor: pointer;
         border-radius: 4px;
@@ -1021,10 +1022,10 @@ footer {
         width: 85%;
     }
 
-    /* section {
+    section {
         width: 90%;
-        height: 82%;
-    } */
+        /* height: 82%; */
+    }
 
     section .navigation {
         bottom: -10%;
