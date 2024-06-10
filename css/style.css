@@ -1031,7 +1031,6 @@ footer {
     }
 
     section .navigation {
-        transform: translateX(-10%);
         bottom: -10%;
     }
 
