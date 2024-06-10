@@ -1065,4 +1065,8 @@ footer {
         height: 210vh;
     }
 
+    .navigation li{
+        float:left;
+    }
+
 }
