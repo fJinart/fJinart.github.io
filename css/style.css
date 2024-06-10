@@ -507,7 +507,7 @@ footer {
     }
 
     .navigation li {
-        display:inline;
+        flex-direction: row;
         list-style: none;
         cursor: pointer;
         border-radius: 4px;
@@ -1021,7 +1021,7 @@ footer {
         width: 85%;
     }
 
-/*     section {
+    /* section {
         width: 90%;
         height: 82%;
     } */
