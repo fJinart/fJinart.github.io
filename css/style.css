@@ -503,14 +503,11 @@ footer {
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        /* height: 40px;
-        width: 60px; */
+        height: 40px;
+        width: 60px;
     }
 
     .navigation li {
-        float:left;
-        height: 40px;
-        width: 60px;
         list-style: none;
         cursor: pointer;
         border-radius: 4px;
@@ -521,6 +518,8 @@ footer {
 
     .navigation li img {
         transition: 0.5s;
+        height: 40px;
+        width: 65px;
     }
 
     .navigation li img:hover {
