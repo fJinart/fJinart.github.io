@@ -570,16 +570,16 @@ footer {
 }
 
 .field_img {
-    flex: auto;
+    flex: 1 0 auto;
     width: 50%;
-    height: 100%;
+    height: auto;
 
 }
 
 .field_img img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -598,7 +598,7 @@ footer {
     font-weight: bold;
     font-size: 1.5rem;
     position: absolute;
-    top: 40%;
+    top: 37%;
 }
 
 .field_title span {
@@ -609,7 +609,8 @@ footer {
     margin-left: -75px;
     scale: 0.9;
     position: absolute;
-    top: 57%;
+    margin-top: 3%;
+    /* top: 57%; */
     left: 50%;
 }
 
@@ -1050,17 +1051,22 @@ video {
         bottom: -10%;
     }
 
+    .fields{
+        height: 70%;
+    }
 
     .field_txt {
-        scale: 0.85;
+        transform: scale(0.85);
+        /* margin-top: 6%; */
+    }
+
+    #logo_btn{
+        margin-top: 39%;
+
     }
 
     .field_title {
-        top: 25%;
-    }
-
-    .field_img {
-        width: 80%;
+        margin-top: 25%;
     }
 
 
@@ -1071,9 +1077,4 @@ video {
     #main {
         height: 60%;
     }
-
-    /* #slide_series {
-        width: 100vw;
-        height: 80vh;
-    } */
 }
