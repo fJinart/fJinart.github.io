@@ -35,103 +35,32 @@
             </div>
         </header>
         <div class="body_wrap">
-            <!-- Slideshow container -->
-            <main class="main-content" id="slide_photo">
-                <section class="slideshow">
-                    <div class="slideshow-inner">
-                        <div class="slides">
-
-                            <div class="slide is-active">
-                                <div class="slide-content">
-                                    <div class="caption">
-                                        <div class="title_slide">Walk</div>
-                                        <!-- <div class="text_slide">
-                                        <p>Slide description 1</p>
-                                    </div> -->
-                                    </div>
-                                    <a href="walk.html" class="btn">
-                                        <span class="btn-inner">Details</span>
-                                    </a>
-                                </div>
-                                <div class="image-container">
-                                    <img src="images/Photography/Walk/CherryBlossom1.jpg" alt="park1" class="image" />
-                                </div>
-                            </div>
-
-                            <div class="slide">
-                                <div class="slide-content">
-                                    <div class="caption">
-                                        <div class="title_slide">Trips</div>
-
-                                    </div>
-                                    <a href="trips.html" class="btn">
-                                        <span class="btn-inner">Details</span>
-                                    </a>
-                                </div>
-                                <div class="image-container">
-                                    <img src="images/Photography/Trips/Trips1.jpg" alt="Trips1" class="image" />
-                                </div>
-                            </div>
-
-                            <div class="slide">
-                                <div class="slide-content">
-                                    <div class="caption">
-                                        <div class="title_slide">Sunset</div>
-
-                                    </div>
-                                    <a href="sunset.html" class="btn">
-                                        <span class="btn-inner">Details</span>
-                                    </a>
-                                </div>
-                                <div class="image-container">
-                                    <img src="images/Photography/Sunset/Sunset1.jpg" alt="Sunset1" class="image" />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="pagination">
-                            <div class="item is-active">
-                                <span class="icon">1</span>
-                            </div>
-                            <div class="item">
-                                <span class="icon">2</span>
-                            </div>
-                            <div class="item">
-                                <span class="icon">3</span>
-                            </div>
-
-                        </div>
-
-                        <div class="arrows">
-                            <div class="arrow prev">
-                                <span class="svg svg-arrow-left">
-                                    <svg version="1.1" id="svg4-Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px"
-                                        height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26"
-                                        xml:space="preserve">
-                                        <path
-                                            d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z" />
-                                    </svg>
-                                    <span class="alt sr-only"></span>
-                                </span>
-                            </div>
-                            <div class="arrow next">
-                                <span class="svg svg-arrow-right">
-                                    <svg version="1.1" id="svg5-Layer_1" xmlns="http://www.w3.org/2000/svg"
-                                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="14px"
-                                        height="26px" viewBox="0 0 14 26" enable-background="new 0 0 14 26"
-                                        xml:space="preserve">
-                                        <path
-                                            d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z" />
-                                    </svg>
-                                    <span class="alt sr-only"></span>
-                                </span>
-                            </div>
-                        </div>
-
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide active" data-title="Walk" data-button="walk.html" data-button-text="Details">
+                        <img src="images/Photography/Walk/CherryBlossom1.jpg" alt="CherryBlossom1">
                     </div>
-                </section>
-            </main>
+                    <div class="slide" data-title="Trips" data-button="trips.html">
+                        <img src="images/Photography/Trips/Trips1.jpg" alt="Trips1">
+                    </div>
+                    <div class="slide" data-title="Sunset" data-button="sunset.html">
+                        <img src="images/Photography/Sunset/Sunset1.jpg" alt="Sunset1">
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="prev">Prev</button>
+                    <div class="center-container">
+                        <h2 class="slider-title">Slider Title</h2>
+                        <button class="center">Details</button>
+                    </div>
+                    <button class="next">Next</button>
+                </div>
+                <div class="nav-buttons">
+                    <button class="nav-button active" data-slide="0"></button>
+                    <button class="nav-button" data-slide="1"></button>
+                    <button class="nav-button" data-slide="2"></button>
+                </div>
+            </div>
         </div>
         <footer>
             <div class="foot">ⓒ 2024 fJin. ALL RIGHTS RESERVED.</div>
