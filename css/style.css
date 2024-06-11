@@ -620,6 +620,20 @@ footer {
     margin-top: 3%;
     /* top: 57%; */
     left: 50%;
+    border: 1px solid #fff;
+    width: 150px;
+    height:40px;
+    line-height: 40px;
+    text-align: center;
+}
+
+#logo_btn:hover{
+    background-color: #67885c;
+    transition: 0.2s;
+}
+
+.btn-inner{
+    color:#fff099;
 }
 
 #lawfirm {
