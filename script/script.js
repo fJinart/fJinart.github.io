@@ -15,12 +15,45 @@ $(function () {
     });
 });
 
-jQuery(document).ready(function () {
+//popup menu
 
-    $(".menu_m").click(function () {
-        $(".popup_menu").slideToggle(500);
-    });
+$(document).ready(function() {
+  // 메뉴 아이콘 클릭 시 팝업 메뉴 토글
+  $('.menu_m').click(function(event) {
+      event.stopPropagation(); // 이벤트 버블링 방지
+      var $popupMenu = $('.popup_menu');
+      
+      if ($popupMenu.hasClass('show')) {
+          $popupMenu.removeClass('show');
+          setTimeout(function() {
+              $popupMenu.hide();
+          }, 200); // 200ms 후에 display를 none으로 설정
+      } else {
+          $popupMenu.show();
+          setTimeout(function() {
+              $popupMenu.addClass('show');
+          }, 10); // 약간의 지연 후에 클래스 추가
+      }
+  });
+
+  // 팝업 메뉴 외부 클릭 시 팝업 메뉴 숨김
+  $(document).click(function() {
+      var $popupMenu = $('.popup_menu');
+      if ($popupMenu.hasClass('show')) {
+          $popupMenu.removeClass('show');
+          setTimeout(function() {
+              $popupMenu.hide();
+          }, 200); // 200ms 후에 display를 none으로 설정
+      }
+  });
+
+  // 팝업 메뉴 클릭 시 메뉴가 닫히지 않도록 방지
+  $('.popup_menu').click(function(event) {
+      event.stopPropagation();
+  });
 });
+
+
 
 //painting page
 function openCity(evt, cityName) {
@@ -37,11 +70,44 @@ function openCity(evt, cityName) {
     evt.currentTarget.className += " active";
 }
 
-$(document).ready(function () {
-    $(".col>a").click(function () {
-        $("#myModal").modal();
-    });
-});
+//현재 Tab 위치 기억했다가 뒤로가기 눌렀을 때 보이도록
+
+// 페이지 로드될 때 실행되는 함수
+window.onload = function() {
+  // 세션 스토리지에서 이전에 활성화되었던 탭의 정보를 가져옴
+  var activeTab = sessionStorage.getItem('activeTab');
+  if (activeTab) {
+      // 이전에 활성화되었던 탭을 다시 활성화함
+      openCity(ev, activeTab);
+  }
+}
+
+// 탭 클릭 시 호출되는 함수
+function openCity(event, cityName) {
+  // 모든 탭 내용을 숨김
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+
+  // 모든 탭 링크의 활성화 클래스를 제거
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // 현재 클릭된 탭을 활성화함
+  document.getElementById(cityName).style.display = "block";
+
+  // 클릭된 탭 버튼에 활성화 클래스를 추가
+  event.currentTarget.className += " active";
+
+  // 활성화된 탭의 정보를 세션 스토리지에 저장
+  sessionStorage.setItem('activeTab', cityName);
+}
+
+
 
 //Series Tab
 
@@ -124,222 +190,25 @@ function updateTitleAndButton() {
 });
 
 
+//Scroll Top
+document.addEventListener("DOMContentLoaded", function() {
+  var scrollToTopButton = document.getElementById("scrollToTop");
 
+  // Show the button when the user scrolls down 100px from the top
+  window.addEventListener("scroll", function() {
+      if (window.scrollY > 100) {
+          scrollToTopButton.style.display = "block";
+      } else {
+          scrollToTopButton.style.display = "none";
+      }
+  });
 
+  // Scroll to the top when the button is clicked
+  scrollToTopButton.addEventListener("click", function() {
+      window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+      });
+  });
+});
 
-
-// var slideshowDuration = 4000;
-// var slideshow = $('.main-content .slideshow');
-
-// function slideshowSwitch(slideshow, index, auto) {
-//   if (slideshow.data('wait')) return;
-
-//   var slides = slideshow.find('.slide');
-//   var pages = slideshow.find('.pagination');
-//   var activeSlide = slides.filter('.is-active');
-//   var activeSlideImage = activeSlide.find('.image-container');
-//   var newSlide = slides.eq(index);
-//   var newSlideImage = newSlide.find('.image-container');
-//   var newSlideContent = newSlide.find('.slide-content');
-//   var newSlideElements = newSlide.find('.caption');//> *
-//   if (newSlide.is(activeSlide)) return;
-
-//   newSlide.addClass('is-new');
-//   var timeout = slideshow.data('timeout');
-//   clearTimeout(timeout);
-//   slideshow.data('wait', true);
-//   var transition = slideshow.attr('data-transition');
-//   if (transition == 'fade') {
-//     newSlide.css({
-//       display: 'block',
-//       zIndex: 2
-//     });
-//     newSlideImage.css({
-//       opacity: 0
-//     });
-
-//     TweenMax.to(newSlideImage, 1, {
-//       alpha: 1,
-//       onComplete: function () {
-//         newSlide.addClass('is-active').removeClass('is-new');
-//         activeSlide.removeClass('is-active');
-//         newSlide.css({ display: '', zIndex: '' });
-//         newSlideImage.css({ opacity: '' });
-//         slideshow.find('.pagination').trigger('check');
-//         slideshow.data('wait', false);
-//         if (auto) {
-//           timeout = setTimeout(function () {
-//             slideshowNext(slideshow, false, true);
-//           }, slideshowDuration);
-//           slideshow.data('timeout', timeout);
-//         }
-//       }
-//     });
-//   } else {
-    
-//     if (newSlide.index() > activeSlide.index()) {
-//       var newSlideRight = 0;
-//       var newSlideLeft = 'auto';
-//       var newSlideImageRight = slideshow.width() / 4;
-//       var newSlideImageLeft = 'auto';
-//       var newSlideImageToRight = 0;
-//       var newSlideImageToLeft = 'auto';
-//       var newSlideContentLeft = 'auto';
-//       var newSlideContentRight = 0;
-//       var activeSlideImageLeft = -slideshow.width() / 2;
-//     } else {
-//       var newSlideRight = '';
-//       var newSlideLeft = 0;
-//       var newSlideImageRight = 'auto';
-//       var newSlideImageLeft = -slideshow.width() / 2;
-//       var newSlideImageToRight = '';
-//       var newSlideImageToLeft = 0;
-//       var newSlideContentLeft = 0;
-//       var newSlideContentRight = 'auto';
-//       var activeSlideImageLeft = slideshow.width() / 1;
-//     }
-
-//     newSlide.css({
-//       display: 'block',
-//       width: 0,
-//       right: newSlideRight,
-//       left: newSlideLeft
-//       , zIndex: 2
-//     });
-
-//     newSlideImage.css({
-//       width: slideshow.width(),
-//       right: newSlideImageRight,
-//       left: newSlideImageLeft
-//     });
-
-//     newSlideContent.css({
-//       width: slideshow.width(),
-//       left: newSlideContentLeft,
-//       right: newSlideContentRight
-//     });
-
-//     activeSlideImage.css({
-//       left: 0
-//     });
-
-//     TweenMax.set(newSlideElements, { y: 20, force3D: true });
-//     TweenMax.to(activeSlideImage, 1, {
-//       left: activeSlideImageLeft,
-//       ease: Power4.easeInOut
-//     });
-
-//     TweenMax.to(newSlide, 1, {
-//       width: slideshow.width(),
-//       ease: Power3.easeInOut
-//     });
-
-//     TweenMax.to(newSlideImage, 1, {
-//       right: newSlideImageToRight,
-//       left: newSlideImageToLeft,
-//       ease: Power3.easeInOut
-//     });
-
-//     TweenMax.staggerFromTo(newSlideElements, 0.5, { alpha: 0, y: 60 }, { alpha: 0, y: 0, ease: Power3.easeOut, force3D: true, delay: 0.5 }, 0.2, function () {
-//       newSlide.addClass('is-active').removeClass('is-new');
-//       activeSlide.removeClass('is-active');
-//       newSlide.css({
-//         display: '',
-//         width: '',
-//         left: '',
-//         zIndex: ''
-//       });
-      
-//       newSlideImage.css({
-//         width: '',
-//         right: '',
-//         left: ''
-//       });
-
-//       newSlideContent.css({
-//         width: '',
-//         left: ''
-//       });
-
-//       newSlideElements.css({
-//         opacity: '',
-//         transform: ''
-//       });
-
-
-//       activeSlideImage.css({
-//         left: ''
-//       });
-
-//       slideshow.find('.pagination').trigger('check');
-//       slideshow.data('wait', false);
-//       if (auto) {
-//         timeout = setTimeout(function () {
-//           slideshowNext(slideshow, false, true);
-//         }, slideshowDuration);
-//         slideshow.data('timeout', timeout);
-//       }
-//     });
-//   }
-// }
-
-// function slideshowNext(slideshow, previous, auto) {
-//   var slides = slideshow.find('.slide');
-//   var activeSlide = slides.filter('.is-active');
-//   var newSlide = null;
-//   if (previous) {
-//     newSlide = activeSlide.prev('.slide');
-//     if (newSlide.length == 0) {
-//       newSlide = slides.last();
-//     }
-//   } else {
-//     newSlide = activeSlide.next('.slide');
-//     if (newSlide.length == 0)
-//       newSlide = slides.filter('.slide').first();
-//   }
-
-//   slideshowSwitch(slideshow, newSlide.index(), auto);
-// }
-
-// function homeSlideshowParallax() {
-//   var scrollTop = $(window).scrollTop();
-//   if (scrollTop > windowHeight) return;
-//   var inner = slideshow.find('.slideshow-inner');
-//   var newHeight = windowHeight - (scrollTop / 2);
-//   var newTop = scrollTop * 0.5;
-
-//   inner.css({
-//     transform: 'translateY(' + newTop + 'px)',
-//     height: newHeight
-//   });
-// }
-
-// $(document).ready(function () {
-//   $('.slide').addClass('is-loaded');
-
-//   $('.slideshow .arrows .arrow').on('click', function () {
-//     slideshowNext($(this).closest('.slideshow'), $(this).hasClass('prev'));
-//   });
-
-//   $('.slideshow .pagination .item').on('click', function () {
-//     slideshowSwitch($(this).closest('.slideshow'), $(this).index());
-//   });
-
-//   $('.slideshow .pagination').on('check', function () {
-//     var slideshow = $(this).closest('.slideshow');
-//     var pages = $(this).find('.item');
-//     var index = slideshow.find('.slides .is-active').index();
-//     pages.removeClass('is-active');
-//     pages.eq(index).addClass('is-active');
-//   });
-
-//   var timeout = setTimeout(function () {
-//     slideshowNext(slideshow, false, true);
-//   }, slideshowDuration);
-
-//   slideshow.data('timeout', timeout);
-// });
-
-// if ($('.main-content .slideshow').length > 1) {
-//   $(window).on('scroll', homeSlideshowParallax);
-// }
