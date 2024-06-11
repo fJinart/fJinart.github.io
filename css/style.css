@@ -26,7 +26,7 @@ body {
 }
 
 * {
-    font-family: 'KoPubWorld_M';
+    font-family: 'KoPubWorld_M' !important;
     font-size: 10px;
     color: #67885c;
 }
@@ -132,7 +132,7 @@ header {
 .title {
     float: left;
     margin-top: 1em;
-    font-family: 'Sarina';
+    font-family: 'Sarina' !important;
     width: 100%;
     height: auto;
     line-height: 1.2em;
@@ -838,7 +838,7 @@ video {
         .title_slide {
             box-sizing: border-box;
             color: #fef3b8;
-            font-family: 'Questrial';
+            font-family: 'Questrial' !important;;
             width: 100%;
             text-align: center;
             flex: none;
