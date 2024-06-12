@@ -262,7 +262,7 @@ header {
     flex: auto;
     height: auto;
     flex-direction: row;
-    margin-top: 2em; /* branch와 tab 사이에 간격 추가 */
+    margin-top: 3em; /* branch와 tab 사이에 간격 추가 */
 }
 
 #contents {
