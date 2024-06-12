@@ -10,37 +10,43 @@ try {
 
 $(function () {
   $('.tab>li>a').click(function () {
-      // 현재 클릭한 탭을 활성화하고 나머지 탭을 비활성화
       $(this).parent().addClass("active")
           .siblings()
           .removeClass("active");
-
-      // 현재 클릭한 탭의 body를 보여주고 나머지 body를 숨김
-      $(this).parent().find('div').show();
-      $(this).parent().siblings().find('div').hide();
-
-      // 탭 텍스트가 "KO"인지 확인하고 footer를 보이거나 숨김
-      if ($(this).text().trim() === "KO") {
-          $('footer').show();
-      } else {
-          $('footer').hide();
-      }
-
       return false;
   });
-
-  // 초기 상태 설정: 첫 번째 탭 활성화 및 나머지 탭의 body 숨기기
-  $('.tab>li:first-child').addClass("active");
-  $('.tab>li:first-child').find('div').show();
-  $('.tab>li:not(:first-child)').find('div').hide();
-
-  // 페이지 로드 시 첫 번째 탭의 텍스트가 "KO"인지 확인하고 footer를 보이거나 숨김
-  if ($('.tab>li:first-child>a').text().trim() === "KO") {
-      $('footer').show();
-  } else {
-      $('footer').hide();
-  }
 });
+
+
+// $(function () {
+//   $('.tab>li>a').click(function () {
+//       $(this).parent().addClass("active")
+//           .siblings()
+//           .removeClass("active");
+
+//       $(this).parent().find('div').show();
+//       $(this).parent().siblings().find('div').hide();
+
+//       if ($(this).text().trim() === "KO") {
+//           $('footer').show();
+//       } else {
+//           $('footer').hide();
+//       }
+
+//       return false;
+//   });
+
+//   $('.tab>li:first-child').addClass("active");
+//   $('.tab>li:first-child').find('div').show();
+//   $('.tab>li:not(:first-child)').find('div').hide();
+
+  
+//   if ($('.tab>li:first-child>a').text().trim() === "KO") {
+//       $('footer').show();
+//   } else {
+//       $('footer').hide();
+//   }
+// });
 
 //popup menu
 
