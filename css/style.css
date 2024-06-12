@@ -29,7 +29,8 @@ body {
 
 #wrap {
     width: 360px;
-    min-height: 100vh; /* 높이를 자식 요소들에 맞추어 확장하도록 설정 */
+    min-height: 100vh;
+    /* 높이를 자식 요소들에 맞추어 확장하도록 설정 */
     margin: 0 auto;
     background-color: #fff099;
     display: flex;
@@ -124,11 +125,13 @@ header {
 
 #main {
     width: 100%;
-    min-height: 100vh; /* 자식 요소들에 맞추어 확장되도록 설정 */
+    min-height: 100vh;
+    /* 자식 요소들에 맞추어 확장되도록 설정 */
     background-color: #fff099;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* 부모 요소의 남는 공간을 차지하도록 설정 */
+    flex-grow: 1;
+    /* 부모 요소의 남는 공간을 차지하도록 설정 */
 }
 
 .title {
@@ -152,7 +155,8 @@ header {
     flex: auto;
     flex-wrap: wrap;
     overflow: auto;
-    margin-bottom: 2em; /* tab과 branch 사이에 간격 추가 */
+    margin-bottom: 2em;
+    /* tab과 branch 사이에 간격 추가 */
 }
 
 #b_container_bio {
@@ -262,7 +266,8 @@ header {
     flex: auto;
     height: auto;
     flex-direction: row;
-    margin-top: 3em; /* branch와 tab 사이에 간격 추가 */
+    margin-top: 3em;
+    /* branch와 tab 사이에 간격 추가 */
 }
 
 #contents {
@@ -468,7 +473,7 @@ footer {
     box-sizing: border-box;
 }
 
-.series_title{
+.series_title {
     font-weight: bold;
     font-size: 1.8rem;
     margin-left: 1rem;
@@ -489,7 +494,7 @@ footer {
     flex-direction: column;
 }
 
-.video_container > span {
+.video_container>span {
     line-height: 1.8rem;
     text-align: justify;
     font-size: 0.95rem;
@@ -609,18 +614,18 @@ footer {
     left: 50%;
     border: 1px solid #fff;
     width: 150px;
-    height:40px;
+    height: 40px;
     line-height: 40px;
     text-align: center;
 }
 
-#logo_btn:hover{
+#logo_btn:hover {
     background-color: #67885c;
     transition: 0.2s;
 }
 
-.btn-inner{
-    color:#fff099;
+.btn-inner {
+    color: #fff099;
 }
 
 #lawfirm {
@@ -723,13 +728,15 @@ video {
 .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    height: 100%; /* 슬라이더 높이에 맞춤 */
+    height: 100%;
+    /* 슬라이더 높이에 맞춤 */
 }
 
 .slide {
     min-width: 100%;
     box-sizing: border-box;
-    height: 100%; /* 슬라이더 높이에 맞춤 */
+    height: 100%;
+    /* 슬라이더 높이에 맞춤 */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -754,10 +761,12 @@ video {
 .navigation button {
     background-color: transparent;
     border: none;
-    color: #67885c; /* 텍스트 색상 변경 */
+    color: #67885c;
+    /* 텍스트 색상 변경 */
     /* padding: 10px; */
     cursor: pointer;
-    font-size: 20px; /* 아이콘 크기 조정 */
+    font-size: 20px;
+    /* 아이콘 크기 조정 */
 }
 
 
@@ -785,16 +794,17 @@ video {
     border: 1px solid #fff;
     width: 150px;
     height: 40px;
-    line-height: 40px;   
+    line-height: 40px;
 }
 
-.navigation .center:hover{
-    color:#67885c;
+.navigation .center:hover {
+    color: #67885c;
 }
 
 .nav-buttons {
     position: absolute;
-    bottom: 20px; /* 이미지 하단에 배치 */
+    bottom: 20px;
+    /* 이미지 하단에 배치 */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -818,11 +828,22 @@ video {
 
 /* Bio Page */
 
-#main_b {
+/* #main_b {
     overflow: auto;
     width: 100%;
     height: 100%;
     display: block;
+} */
+
+#main_b {
+    overflow: auto;
+    width: 100%;
+    min-height: 130vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* 부모 요소의 남는 공간을 차지하도록 설정 */
+
 }
 
 /* Walk Page */
@@ -835,15 +856,19 @@ video {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 30px; /* Adjust as needed */
-    height: 30px; /* Adjust as needed */
-    display: none; /* Initially hidden */
+    width: 30px;
+    /* Adjust as needed */
+    height: 30px;
+    /* Adjust as needed */
+    display: none;
+    /* Initially hidden */
     cursor: pointer;
-    z-index: 10; /* Ensure it is above other elements */
+    z-index: 10;
+    /* Ensure it is above other elements */
 }
 
-.scroll-to-top:hover{
-    opacity:0.8;
+.scroll-to-top:hover {
+    opacity: 0.8;
 }
 
 .scroll-to-top img {
@@ -871,24 +896,28 @@ video {
         height: 65%;
     }
 
-    #index_tab {
+    /* #index_tab {
         height: 35vh;
-    }
-
-    /* #contents {
-        height: 14%;
     } */
 
-    .tab>li.active div {
-        height: auto;
-        /* height: 75%; */
+    .tab>li>a {
+        display: none;
     }
 
-    #logo_btn{
+    /* .tab>li.active div {
+        height: auto;
+    } */
+
+    .tab>li div {
+        display: block;
+        width: 70%;
+        height: 50%;
+        margin-top: 28%;
+    }
+
+    #logo_btn {
         margin-top: 30%;
     }
-
-
 }
 
 
@@ -911,7 +940,7 @@ video {
         bottom: -10%;
     }
 
-    .fields{
+    .fields {
         height: 70%;
     }
 
