@@ -913,11 +913,25 @@ video {
     flex-wrap: wrap;
 }
 
+
 .gallery-image {
     width: 30%;
     cursor: pointer;
     margin-bottom: 10px;
     transition: transform 0.2s;
+}
+
+.gallery-image.lilac4 {
+    width: 205%;
+}
+
+.spacer {
+    pointer-events: none;
+}
+
+.spacer img,
+.spacer .info {
+    visibility: hidden;
 }
 
 .gallery-image:hover {
