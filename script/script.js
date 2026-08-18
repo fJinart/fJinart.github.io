@@ -216,7 +216,7 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
-function showImage(index) {
+/*function showImage(index) {
     if (index >= images.length) {
         currentIndex = 0;
     } else if (index < 0) {
@@ -230,6 +230,38 @@ function showImage(index) {
     const info = images[currentIndex].closest('.col').querySelector('.info');
     const title = info.querySelector('h3').innerText;
     modalTitle.innerText = title;
+}
+    */
+
+function showImage(index) {
+    if (index >= images.length) {
+        currentIndex = 0;
+    } else if (index < 0) {
+        currentIndex = images.length - 1;
+    } else {
+        currentIndex = index;
+    }
+
+    modalImage.src = images[currentIndex].src;
+
+    const info = images[currentIndex].closest('.col').querySelector('.info');
+    const h3 = info.querySelector('h3');
+    const title = h3.innerText;
+
+    modalTitle.innerText = title;
+
+    // 기본값
+    modalTitle.style.fontSize = '';
+
+    // 한 줄 높이 측정
+    const lineHeight = parseFloat(
+        window.getComputedStyle(modalTitle).lineHeight
+    );
+
+    // 실제 높이가 한 줄보다 큰 경우 → 80%
+    if (modalTitle.offsetHeight > lineHeight * 1.5) {
+        modalTitle.style.fontSize = '80%';
+    }
 }
 
 function changeSlide(direction) {
