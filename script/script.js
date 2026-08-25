@@ -214,6 +214,12 @@ function openModal(index) {
 
 function closeModal() {
     modal.style.display = 'none';
+    const targetImage = images[currentIndex];
+
+    targetImage.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
 }
 
 /*function showImage(index) {
